@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Exercise02_201905203
+{
+    public static void main(String args[])
+    {
+        Scanner input = new Scanner (System.in);
+        System.out.println("Enter the balance");
+        Double balance = input.nextDouble();
+        System.out.println("Enter the annual interest rate");
+        Double annualInterestRate = input.nextDouble();
+        CalculateInterestRate(annualInterestRate,balance);
+    }
+        static void CalculateInterestRate(Double annualInterestRate, Double balance) 
+        {
+             Double monthlyInterestRate = annualInterestRate/1200;
+             Double interest = balance*monthlyInterestRate;
+             System.out.println("The interest is "+ (int)(100*interest)/100.0);
+        }
+}
